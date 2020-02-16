@@ -79,6 +79,6 @@ model.load_weights("best_weights.hdf5")
 results = model.predict(test)
 results = np.argmax(results,axis = 1)
 
-submission = pd.read_csv('../input/Kannada-MNIST/sample_submission.csv')
+submission = pd.read_csv('sample_submission.csv')
 submission['label'] = results
 submission.to_csv("submission.csv",index=False)
